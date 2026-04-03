@@ -3,6 +3,7 @@ export interface SkillItem {
   name: string;
   description?: string;
   url?: string;
+  icon?: string;
 }
 
 export interface SkillCategory {
