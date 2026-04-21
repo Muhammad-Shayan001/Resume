@@ -3,7 +3,7 @@ import { CVData } from './types';
 
 export const SHAYAN_DATA: CVData = {
   name: "MUHAMMAD SHAYAN",
-  role: "Full-Stack Developer | Data Scientist | Educator",
+  role: "Full-Stack Developer",
   phone: "+92 317-1027397",
   email: "shayan.javed091@gmail.com",
   location: "Karachi, Pakistan",
@@ -78,29 +78,17 @@ export const SHAYAN_DATA: CVData = {
   languages: [
     { name: "Urdu", level: "Native" },
     { name: "English", level: "Professional" },
-    { name: "Arabic", level: "Basic" }
   ],
   experience: [
     {
-      title: "Chat-Based Client Support",
-      subtitle: "Software Company | Chat-Based Client Support",
+      title: "Chat-Based",
+      subtitle: "Software Company | Chat-Based",
       tag: "Support",
-      period: "2025",
+      period: "2025 - present",
       points: [
         "Provided real-time client support via chat-based systems in a professional software company.",
         "Assisted development teams with front-end debugging and issue resolution.",
         "Strengthened teamwork, communication, and problem-solving in an agile environment."
-      ]
-    },
-    {
-      title: "Teaching Experience",
-      subtitle: "Education Sector | Computer Science Instructor",
-      duration: "3 Months",
-      period: "2025",
-      points: [
-        "Delivered structured lessons in computer science fundamentals to 30+ students.",
-        "Managed classroom activities, assessments, and student engagement.",
-        "Mentored students one-on-one, building strong communication and mentoring skills."
       ]
     }
   ],
@@ -109,25 +97,25 @@ export const SHAYAN_DATA: CVData = {
       degree: "BS Software Engineering",
       institution: "UBIT - University of Karachi",
       status: "In Progress",
-      period: "2023 – Present"
+      period: "2026 – Present"
     },
     {
       degree: "Dars-e-Nizami (Alim Course)",
       institution: "Kanz-ul-Madaris Board",
       status: "In Progress",
-      period: "2019 – Present"
+      period: "2023 – Present"
     },
     {
       degree: "Intermediate",
       institution: "BIEK Karachi",
       status: "Completed",
-      period: "2021 – 2023"
+      period: "2023 – 2025"
     },
     {
       degree: "Matriculation",
       institution: "BSEK Karachi",
       status: "Completed",
-      period: "2019 – 2021"
+      period: "2021 – 2023"
     }
   ],
   socials: [
@@ -154,8 +142,8 @@ export const SHAYAN_DATA: CVData = {
     },
     {
       platform: "YouTube",
-      url: "https://youtube.com/@muhammadshayan001",
-      handle: "@muhammadshayan001",
+      url: "https://www.youtube.com/@StudywithMuhammadShayan",
+      handle: "@StudywithMuhammadShayan",
       icon: "youtube",
       color: "bg-red-600"
     },
@@ -165,6 +153,20 @@ export const SHAYAN_DATA: CVData = {
       handle: "@muhammadshayan001",
       icon: "instagram",
       color: "bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600"
+    },
+    {
+      platform: "TikTok",
+      url: "https://www.tiktok.com/@studywithmuhammadshayan",
+      handle: "@studywithmuhammadshayan",
+      icon: "tiktok",
+      color: "bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600"
+    },
+    {
+      platform: "Portfolio",
+      url: "https://portfolio-website-tdz9.vercel.app/",
+      handle: "Portfolio Web",
+      icon: "globe",
+      color: "bg-indigo-600"
     },
     {
       platform: "Kaggle",
@@ -179,18 +181,13 @@ export const SHAYAN_DATA: CVData = {
     {
       name: "Portfolio Website",
       description: "A modern, responsive personal portfolio built with React and Tailwind CSS featuring dark theme, smooth animations, and print-to-PDF support.",
-      techStack: ["React", "TypeScript", "Tailwind CSS", "Vite"]
+      techStack: ["React", "TypeScript", "Tailwind CSS", "Vite"],
+      liveUrl: "https://portfolio-website-tdz9.vercel.app/"
     },
     {
       name: "E-Commerce Store",
       description: "Full-stack e-commerce application with product listing, cart management, user authentication, and payment integration.",
       techStack: ["Next.js", "Node.js", "MongoDB", "REST API"]
-    },
-    {
-      name: "Data Science Notebooks",
-      description: "Collection of 17 Kaggle course notebooks covering ML, deep learning, data visualization, NLP, and computer vision.",
-      techStack: ["Python", "Pandas", "Scikit-learn", "TensorFlow"],
-      liveUrl: "https://www.kaggle.com"
     }
   ],
   kaggleCertifications: [

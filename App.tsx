@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { SHAYAN_DATA } from './constants';
 import { 
-  Phone, Mail, MapPin, ExternalLink, Download, Github, Linkedin, Calendar, GraduationCap, Code2, Globe, Sparkles, Award 
+  Phone, Mail, MapPin, ExternalLink, Download, Github, Linkedin, Youtube, Instagram, Music2, Calendar, GraduationCap, Code2, Globe, Sparkles, Award 
 } from 'lucide-react';
 
 const App = () => {
@@ -18,8 +18,12 @@ const App = () => {
 
   const getSocialIcon = (platform: string) => {
     switch (platform.toLowerCase()) {
+      case 'portfolio': return <Globe size={14} />;
       case 'github': return <Github size={14} />;
       case 'linkedin': return <Linkedin size={14} />;
+      case 'youtube': return <Youtube size={14} />;
+      case 'instagram': return <Instagram size={14} />;
+      case 'tiktok': return <Music2 size={14} />;
       default: return <ExternalLink size={14} />;
     }
   };
@@ -52,17 +56,19 @@ const App = () => {
       <main className="w-full max-w-[210mm] min-h-[297mm] bg-white shadow-xl print:shadow-none mx-auto overflow-hidden text-slate-800 text-[13px] leading-relaxed">
         
         {/* Header - Top Section */}
-        <header className="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white px-10 py-10 print:px-8 print:py-8 border-b-4 border-indigo-500">
-          <h1 className="text-4xl font-black font-outfit tracking-tighter uppercase mb-1 drop-shadow-md">
-            {SHAYAN_DATA.name}
-          </h1>
-          <h2 className="text-indigo-400 text-[15px] font-bold tracking-widest uppercase mb-5 flex items-center gap-3">
-            {SHAYAN_DATA.role}
-            <div className="h-px flex-1 bg-gradient-to-r from-indigo-500/50 to-transparent"></div>
-          </h2>
-          
-          <div className="flex flex-wrap gap-x-6 gap-y-3 text-[13px] font-medium text-slate-300">
-            <div className="flex items-center gap-2 group">
+        <header className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-indigo-950 text-white px-10 py-10 print:px-8 print:py-8 border-b-[6px] border-indigo-500 overflow-hidden">
+          <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 mix-blend-overlay"></div>
+          <div className="relative z-10">
+            <h1 className="text-[2.75rem] leading-tight font-black font-outfit tracking-tighter uppercase mb-1 drop-shadow-lg text-transparent bg-clip-text bg-gradient-to-r from-white via-indigo-100 to-indigo-300">
+              {SHAYAN_DATA.name}
+            </h1>
+            <h2 className="text-indigo-400 text-[15px] font-bold tracking-widest uppercase mb-5 flex items-center gap-3">
+              {SHAYAN_DATA.role}
+              <div className="h-px flex-1 bg-gradient-to-r from-indigo-500/50 to-transparent"></div>
+            </h2>
+            
+            <div className="flex flex-wrap gap-x-6 gap-y-3 text-[13px] font-medium text-slate-300">
+              <div className="flex items-center gap-2 group">
               <div className="p-1.5 bg-white/10 rounded-md group-hover:bg-indigo-500/50 transition-colors">
                 <Mail size={12} className="text-indigo-300" />
               </div>
@@ -80,7 +86,9 @@ const App = () => {
               </div>
               <span className="tracking-wide">{SHAYAN_DATA.location}</span>
             </div>
-            {SHAYAN_DATA.socials.slice(0, 2).map((social, i) => (
+            {SHAYAN_DATA.socials
+              .filter(social => ['Portfolio', 'GitHub', 'LinkedIn', 'YouTube', 'Instagram', 'TikTok'].includes(social.platform))
+              .map((social, i) => (
               <div key={i} className="flex items-center gap-2 group">
                 <div className="p-1.5 bg-white/10 rounded-md group-hover:bg-indigo-500/50 transition-colors">
                   <span className="text-indigo-300">{getSocialIcon(social.platform)}</span>
@@ -90,6 +98,7 @@ const App = () => {
                 </a>
               </div>
             ))}
+          </div>
           </div>
         </header>
 
@@ -127,13 +136,13 @@ const App = () => {
               <div className="space-y-4">
                 {SHAYAN_DATA.skills.map((skillGroup, idx) => (
                   <div key={idx} className="print-avoid-break">
-                    <h4 className="font-bold text-slate-700 text-[11px] uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                    <h4 className="font-black text-slate-700 text-[11px] uppercase tracking-wider mb-2 flex items-center gap-1.5">
                       <div className="w-1 h-1 rounded-full bg-indigo-400"></div>
                       {skillGroup.title}
                     </h4>
-                    <div className="flex flex-wrap gap-1.5">
+                    <div className="flex flex-wrap gap-2 mt-2">
                       {skillGroup.items.map((skill, sIdx) => (
-                        <span key={sIdx} className="px-2.5 py-1 bg-white border border-slate-200 shadow-sm rounded text-[10.5px] font-semibold text-slate-600 hover:border-indigo-300 transition-colors">
+                        <span key={sIdx} className="px-3 py-1 bg-white border border-slate-200/80 shadow-sm rounded-full text-[10.5px] font-bold text-slate-600 print:text-slate-800 print:border-slate-300 hover:border-indigo-400 hover:text-indigo-600 hover:shadow-md transition-all">
                           {skill.name}
                         </span>
                       ))}
@@ -173,10 +182,10 @@ const App = () => {
             
             {/* Professional Summary */}
             <section>
-              <h3 className="text-[15px] font-black font-outfit uppercase tracking-widest text-blue-800 flex items-center gap-2 mb-3">
-                <Sparkles size={16} className="text-indigo-500" /> Professional Summary
+              <h3 className="text-[16px] font-black font-outfit uppercase tracking-widest text-slate-800 flex items-center gap-2 mb-3">
+                <Sparkles size={18} className="text-indigo-500" /> Professional Summary
               </h3>
-              <p className="text-slate-600 leading-relaxed text-[13px] text-justify bg-slate-50/50 p-4 rounded-lg border border-slate-100/80">
+              <p className="text-slate-600 leading-relaxed text-[13px] text-justify bg-indigo-50/50 p-5 rounded-xl border border-indigo-100/60 shadow-sm print:shadow-none print:bg-transparent print:border-none print:p-0">
                 {SHAYAN_DATA.profileSummary}
               </p>
             </section>
@@ -212,7 +221,7 @@ const App = () => {
 
             {/* Projects */}
             <section>
-              <h3 className="text-[15px] font-black font-outfit uppercase tracking-widest text-blue-800 flex items-center gap-2 mb-4 mt-2 border-b-2 border-blue-100 pb-2">
+              <h3 className="text-[15px] font-black font-outfit uppercase tracking-widest text-slate-800 flex items-center gap-2 mb-4 mt-2 border-b-2 border-slate-100 pb-2">
                 Key Projects
               </h3>
               <div className="space-y-4">
@@ -244,7 +253,7 @@ const App = () => {
 
             {/* Achievements & Certifications */}
             <section>
-              <h3 className="text-[15px] font-black font-outfit uppercase tracking-widest text-blue-800 flex items-center gap-2 mb-4 mt-2 border-b-2 border-blue-100 pb-2">
+              <h3 className="text-[15px] font-black font-outfit uppercase tracking-widest text-slate-800 flex items-center gap-2 mb-4 mt-2 border-b-2 border-slate-100 pb-2">
                 Achievements & Certifications
               </h3>
               <div className="space-y-4">
