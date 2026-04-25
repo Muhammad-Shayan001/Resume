@@ -187,7 +187,21 @@ export const SHAYAN_DATA: CVData = {
     {
       name: "E-Commerce Store",
       description: "Full-stack e-commerce application with product listing, cart management, user authentication, and payment integration.",
-      techStack: ["Next.js", "Node.js", "MongoDB", "REST API"]
+      techStack: ["Next.js", "Node.js", "MongoDB", "REST API"],
+      liveUrl: "https://drive.google.com/file/d/1T7IoJa66f_dW5s6iiZGGWGm3IB4NUweZ/view?usp=drive_link"
+    }
+    ,
+    {
+      name: "Restaurant Website",
+      description: "Restaurant website project showcasing menu, booking UI and responsive design.",
+      techStack: ["React", "Tailwind CSS", "Netlify"],
+      liveUrl: "https://drive.google.com/file/d/1QN7xIrpRTnZpaptaXDAQAK5olipr0b06/view?usp=drive_link"
+    },
+    {
+      name: "E-Commerce Website (Demo)",
+      description: "E-commerce demo showcasing product pages and checkout flow.",
+      techStack: ["React", "Node.js", "Stripe"],
+      liveUrl: "https://drive.google.com/file/d/1T7IoJa66f_dW5s6iiZGGWGm3IB4NUweZ/view?usp=drive_link"
     }
   ],
   kaggleCertifications: [
