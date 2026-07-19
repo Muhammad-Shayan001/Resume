@@ -117,6 +117,17 @@ const App = () => {
           {/* LEFT COLUMN */}
           <aside className="w-full md:w-[33%] print:w-[33%] bg-gradient-to-br from-slate-50 to-indigo-50 border-r border-indigo-200 px-8 py-8 print:px-6 print:py-6 flex flex-col gap-8 flex-shrink-0">
             
+            {/* QR Code Section */}
+            <section className="flex flex-col items-center justify-center bg-white/60 p-5 rounded-xl border border-indigo-100 shadow-sm print:shadow-none hover:shadow-md transition-all">
+              <div className="relative p-2 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl mb-3">
+                <div className="bg-white p-2 rounded-lg">
+                  <img src="./professional_portfolio_qr.png" alt="Portfolio QR Code" className="w-32 h-32 object-contain" />
+                </div>
+              </div>
+              <p className="text-indigo-900 font-bold text-xs uppercase tracking-widest text-center">Scan Me</p>
+              <p className="text-indigo-500 font-semibold text-[10px] uppercase tracking-wider text-center mt-0.5">To View Portfolio</p>
+            </section>
+
             {/* Education */}
             <section>
               <h3 className="text-sm font-black font-outfit uppercase tracking-widest text-indigo-900 flex items-center gap-2 mb-4">
@@ -242,7 +253,7 @@ const App = () => {
                         {project.name}
                         {project.liveUrl && (
                           <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="text-indigo-500 hover:text-indigo-700 bg-indigo-50 p-1 rounded print:hidden">
-                            <ExternalLink size={12} />
+                            {project.liveUrl.includes('github.com') ? <Github size={12} /> : <ExternalLink size={12} />}
                           </a>
                         )}
                       </h4>

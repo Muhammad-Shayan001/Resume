@@ -179,10 +179,10 @@ export const SHAYAN_DATA: CVData = {
   kaggleDriveLink: "https://drive.google.com/file/d/1jnnItxeZ08YMamkRjWKgTCQm3zXhfUbh/view?usp=sharing",
   projects: [
     {
-      name: "Portfolio Website",
-      description: "A modern, responsive personal portfolio built with React and Tailwind CSS featuring dark theme, smooth animations, and print-to-PDF support.",
-      techStack: ["React", "TypeScript", "Tailwind CSS", "Vite"],
-      liveUrl: "https://portfolio-website-tdz9.vercel.app/"
+      name: "School Management System",
+      description: "A comprehensive backend system for managing school operations, including students, teachers, classes, and administrative tasks.",
+      techStack: ["Node.js", "Express", "MongoDB"],
+      liveUrl: "https://github.com/muhammadshayan001/school-management-system"
     },
     {
       name: "E-Commerce Store",
