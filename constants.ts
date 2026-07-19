@@ -163,7 +163,7 @@ export const SHAYAN_DATA: CVData = {
     },
     {
       platform: "Portfolio",
-      url: "https://portfolio-website-tdz9.vercel.app/",
+      url: "https://www.muhammadshayan.me/",
       handle: "Portfolio Web",
       icon: "globe",
       color: "bg-indigo-600"
